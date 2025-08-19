@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  angular:
+    build: .
+    container_name: angular_app
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./certbot:/etc/letsencrypt
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot:/etc/letsencrypt
+    entrypoint: >
+      /bin/sh -c 'trap exit TERM;
+      while :; do
+        certbot renew;
+        sleep 12h & wait $${!};
+      done'

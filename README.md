@@ -1,5 +1,7 @@
 # How to Deploy Angular App with Docker, Nginx, and Free SSL
 
+Read the full tutorial [here](https://www.djamware.com/post/68a3ea59f699d155f5b344a0/how-to-deploy-angular-app-with-docker-nginx-and-free-ssl).
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
 
 ## Development server
